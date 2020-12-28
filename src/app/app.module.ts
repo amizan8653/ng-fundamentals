@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { EventsAppComponent } from './events-app.component';
 
+// as you create services, pipes, components, or directives, you will need to add them into modules to be able to use them.
 @NgModule({
-  declarations: [
-    EventsAppComponent
-  ],
+
+  
+  // this is where you add other modules
+  // BrowserModule is something that has all the core angular services and directives that almost all angular apps will use.
   imports: [
     BrowserModule
   ],
-  providers: [],
+
+
+  // this is where you add components, pipes, and directives
+  declarations: [
+    EventsAppComponent
+  ],
+
+  // this is where you add services.
+  // providers: [],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
