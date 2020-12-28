@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
   // templateUrl: './app.component.html',
 
   // use template if you want to inline your html. (why would you ever do this?)
-  template: "<h2>Hello World</h2>",
+  template: `
+  <h2>Hello World</h2>
+  <!-- you can give a static path so long as it's defined in the assets array in angular.json -->
+  <img src="/assets/images/basic-shield.png"/>
+  `,
 
   // you can specify styles for this component here.
   // styleUrls: ['./app.component.css']
