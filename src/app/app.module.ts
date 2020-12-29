@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { EventListComponent } from 'src/app/events/events-list.component'
 
 import { EventsAppComponent } from './events-app.component';
 
@@ -16,7 +17,8 @@ import { EventsAppComponent } from './events-app.component';
 
   // this is where you add components, pipes, and directives
   declarations: [
-    EventsAppComponent
+    EventsAppComponent,
+    EventListComponent
   ],
 
   // this is where you add services.
