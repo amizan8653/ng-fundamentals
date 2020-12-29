@@ -13,9 +13,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
             <span>&nbsp;</span>
             <span>{{event.location.city}}, {{event.location.country}}</span>
         </div>
-        <button class="btn btn-primary" (click)="handleClickMe()">
-            Click me!
-        </button>
     </div>
     `
 })
@@ -29,7 +26,5 @@ export class EventThumbnailComponent {
     // the @Output decorator is something that the child component can use to communicate back to the parent component via events.
     @Output() eventClick = new EventEmitter();
 
-    handleClickMe() {
-        this.eventClick.emit(this.event.name)
-    }
+
 }
