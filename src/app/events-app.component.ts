@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   template: `
   <events-list></events-list>
   <!-- you can give a static path so long as it's defined in the assets array in angular.json -->
-  <img src="/assets/images/basic-shield.png"/>
+  <!-- <img src="/assets/images/basic-shield.png"/> -->
   `,
 
   // you can specify styles for this component here.
