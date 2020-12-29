@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
 
   // use template if you want to inline your html. (why would you ever do this?)
   template: `
+  <nav-bar></nav-bar>
   <events-list></events-list>
+
   <!-- you can give a static path so long as it's defined in the assets array in angular.json -->
   <!-- <img src="/assets/images/basic-shield.png"/> -->
   `,

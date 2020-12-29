@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { EventListComponent } from 'src/app/events/events-list.component'
 import { EventThumbnailComponent } from 'src/app/events/event-thumbnail.component'
+import { NavBarComponent } from './nav/navbar.component'
 
 import { EventsAppComponent } from './events-app.component';
 
@@ -20,7 +21,8 @@ import { EventsAppComponent } from './events-app.component';
   declarations: [
     EventsAppComponent,
     EventListComponent,
-    EventThumbnailComponent
+    EventThumbnailComponent,
+    NavBarComponent
   ],
 
   // this is where you add services.
