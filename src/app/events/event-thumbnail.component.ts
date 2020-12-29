@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
     selector: 'event-thumbnail',
@@ -13,11 +13,23 @@ import { Component, Input } from '@angular/core'
             <span>&nbsp;</span>
             <span>{{event.location.city}}, {{event.location.country}}</span>
         </div>
+        <button class="btn btn-primary" (click)="handleClickMe()">
+            Click me!
+        </button>
     </div>
     `
 })
 export class EventThumbnailComponent {
     // declare an object called event that is unrestricted in what type of data it points to.
     // the @Input() decorator indicates that this object will be defined by data coming in from another component.
+    // the @Input() decorator is useful for a child component to get it's data.
     @Input() event:any
+
+
+    // the @Output decorator is something that the child component can use to communicate back to the parent component via events.
+    @Output() eventClick = new EventEmitter();
+
+    handleClickMe() {
+        this.eventClick.emit(this.event.name)
+    }
 }

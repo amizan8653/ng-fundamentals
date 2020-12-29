@@ -6,13 +6,19 @@ import { Component } from '@angular/core'
     <div>
         <h1>Upcoming Angular Events</h1>
         <hr />
-        <event-thumbnail [event]="event1"></event-thumbnail>
+        <!-- 
+            the "eventClick" is the name of the event to listen for from the child component. 
+            "$event" is data emitted from event 
+            you can only emit a single value with an event emitter, so if you need to send multiple things, wrap them in a obj
+        -->
+        <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
     </div>
     `
 })
 export class EventListComponent {
     // you can go and define some data here if you want like this: 
     // but, we're just going to get our data from an API.
+
     event1 = {
         id: 1,
         name: "Angular Connect",
@@ -25,5 +31,9 @@ export class EventListComponent {
             city: 'London',
             country: 'England'
         }
+    }
+
+    handleEventClicked(data:any) {
+        console.log("received:", data);
     }
 }
