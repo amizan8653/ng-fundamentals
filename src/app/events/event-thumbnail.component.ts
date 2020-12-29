@@ -24,7 +24,11 @@ export class EventThumbnailComponent {
 
 
     // the @Output decorator is something that the child component can use to communicate back to the parent component via events.
-    @Output() eventClick = new EventEmitter();
+    // @Output() eventClick = new EventEmitter();
+
+    logFoo() {
+        console.log("foo")
+    }
 
 
 }

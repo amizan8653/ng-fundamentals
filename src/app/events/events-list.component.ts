@@ -13,6 +13,9 @@ import { Component } from '@angular/core'
         -->
         <!-- <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail> -->
 
+        <!-- #thumbnail is a template variable let lets you access public methods & field names -->
+        <!-- <event-thumbnail #thumbnail [event]="event1"></event-thumbnail> -->
+
         <event-thumbnail [event]="event1"></event-thumbnail>
     </div>
     `
